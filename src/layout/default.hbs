@@ -11,6 +11,10 @@
 	</title>
 	<meta charset='utf-8' />
 	<link href='css/index.css' rel='stylesheet' />
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -37,45 +41,12 @@
 
 	{{> nav}}
 
-	{{!-- <nav>
-		{{> link text='Summary' href='/summary' line=true }}
-		{{> link text='Skills' href='/skills'line=true }}
-		{{> link text='Education' href='/education'line=true }}
-		{{> link text='Work' href='/work'line=true }}
-	</nav> --}}
-
-	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
 	{{{body}}}
 
 	{{>footer}}
-	{{!-- {{> footer social=footer.social firstname=header.name.firstname lastname=header.name.lastname
-	address=header.address}} --}}
 
-	{{!-- {{#with footer}}
-	<footer>
-		<hr>
-		<br>
-		<div>
-			{{#with social}}
-			{{> link text=email.text href=email.href blank=true }}
-			{{> link text=phone.text href=phone.href blank=true }}
-			{{> link text=linkedin.text href=linkedin.href blank=true noLine=true}}
-			{{/with}}
-		</div>
-		<br>
-		<hr>
-		<br>
-		<div>
-			<em>Copyright by {{../header.Name.firstname}} {{../header.Name.lastname}}</em>
-		</div>
-		<br>
-		<hr>
-		<br>
-		<div>
-			<address>{{../header.address}}</address>
-		</div>
-	</footer>
-	{{/with}} --}}
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
