@@ -1,0 +1,220 @@
+<div>
+    <ul>
+        <div class="card" style="width: 24rem;">
+            <div class="card-body">
+                <h4 class="card-title">{{make}} {{model}}</h4>
+                <h5 class="card-subtitle mb-2 text-body-secondary">year: {{year}}({{color}})</h5>
+
+                <div class="card">
+                    <div class="card-body">
+                        {{#with features}}
+                        {{#with interior}}
+                        <h5>Features:</h5>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Interior:</h5>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header">
+                                        <b>Seats</b>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        {{#with seats}}
+                                        <li class="list-group-item">Material: {{material}}</li>
+                                        <li class="list-group-item">Color: {{color}}</li>
+                                        <li class="list-group-item">Heated: {{#if heated}} heated {{/if}}</li>
+                                        <li class="list-group-item">Ventilated: {{#if ventilated}} Yes {{/if}}
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header">
+                                        <b>Dashboard</b>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        {{#with dashboard}}
+                                        <li class="list-group-item">Material: {{material}}</li>
+                                        <li class="list-group-item">Color: {{color}}</li>
+                                        <li class="list-group-item">Display:
+                                            {{#with display}}
+                                        <li class="list-group-item"> - {{type}} </li>
+                                        <li class="list-group-item"> - {{size}} </li>
+                                        <li class="list-group-item"> - {{resolution}} </li>
+                                        <li class="list-group-item"> {{#if touchscreen}} - Touchscreen {{/if}}
+                                        </li>
+                                        {{/with}}
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header">
+                                        <b>Audio</b>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        {{#with audio}}
+                                        <li class="list-group-item">System: {{system}}</li>
+                                        <li class="list-group-item">Speakers: {{speakers}}</li>
+                                        <li class="list-group-item">Subwoofer: {{#if subwoofer}} Yes {{/if}}
+                                        <li class="list-group-item">Bluetooth: {{#if bluetooth}} Yes {{/if}}
+                                        <li class="list-group-item">USB: {{#if USB}} Yes {{/if}}
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/with}}
+                        </div>
+                        <br>
+                        {{#with exterior}}
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Exterior:</h5>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header">
+                                        <b>Wheels</b>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        {{#with wheels}}
+                                        <li class="list-group-item">Size: {{size}}</li>
+                                        <li class="list-group-item">Color: {{color}}({{type}})</li>
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header">
+                                        <b>Headlights</b>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        {{#with headlights}}
+                                        <li class="list-group-item">Type: {{type}}</li>
+                                        <li class="list-group-item">Brightness: {{brightness}}</li>
+                                        <li class="list-group-item">Automatic: {{#if automatic}} Yes {{/if}}
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header">
+                                        <b>Sunroof</b>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        {{#with sunroof}}
+                                        <li class="list-group-item">Type: {{type}}</li>
+                                        <li class="list-group-item">Size: {{brightness}}</li>
+                                        <li class="list-group-item">Automatic: {{#if automatic}} Yes {{/if}}
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {{/with}}
+                        <br>
+                        {{#with safety}}
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Safety:</h5>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header">
+                                        <b>Airbags</b>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        {{#with airbags}}
+                                        <li class="list-group-item">Front: {{front}}</li>
+                                        <li class="list-group-item">Side: {{side}}</li>
+                                        <li class="list-group-item">Knee: {{knee}}</li>
+                                        <li class="list-group-item">Rear: {{rear}}</li>
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header">
+                                        <b>Assistance</b>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        {{#with assistance}}
+                                        <li class="list-group-item">Blind spot monitoring: {{#if blind_spot_monitoring}}
+                                            Сheck {{/if}}
+                                        </li>
+                                        <li class="list-group-item">Rear cross traffic alert: {{#if
+                                            rear_cross_traffic_alert}} Сheck
+                                            {{/if}}</li>
+                                        <li class="list-group-item">Lane departure warning: {{#if
+                                            lane_departure_warning}} Сheck
+                                            {{/if}}</li>
+                                        <li class="list-group-item">Adaptive cruise control: {{#if
+                                            adaptive_cruise_control}} Сheck
+                                            {{/if}}</li>
+                                        <li class="list-group-item">Collision warning: {{#if collision_warning}} Сheck
+                                            {{/if}}
+                                        </li>
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {{/with}}
+                        {{/with}}
+                        <br>
+                        {{#with engine}}
+                        <h5>Engine:</h5>
+                        <div class="card" style="width: 20rem;">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Type: {{type}}</li>
+                                <li class="list-group-item">Displacement: {{displacement}}</li>
+                                <li class="list-group-item">Horsepower: {{horsepower}}</li>
+                                <li class="list-group-item">Torque: {{torque}}</li>
+                                <li class="list-group-item">Transmission:
+                                    {{#with transmission}}
+                                <li class="list-group-item"> - {{type}}</li>
+                                <li class="list-group-item"> - {{gears}}(gears)</li>
+                                {{/with}}
+                                </li>
+                            </ul>
+                        </div>
+                        {{/with}}
+                        <br>
+                        {{#with fuel_economy}}
+                        <h5>Fuel economy:</h5>
+                        <div class="card" style="width: 20rem;">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">City: {{city}}</li>
+                                <li class="list-group-item">Highway: {{highway}}</li>
+                                <li class="list-group-item">Combined: {{combined}}</li>
+                                </li>
+                            </ul>
+                        </div>
+                        {{/with}}
+                        <br>
+                        {{#with price}}
+                        <h5>Price:</h5>
+                        <div class="card" style="width: 20rem;">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Base: {{base}}</li>
+                                <li class="list-group-item">Destination: {{destination}}</li>
+                                <li class="list-group-item">Options:
+                                    {{#with options}}
+                                <li class="list-group-item"> - navigation: {{navigation}}</li>
+                                <li class="list-group-item"> - moonroof: {{moonroof}}</li>
+                                <li class="list-group-item"> - premium paint: {{premium_paint}}</li>
+                                {{/with}}
+                                </li>
+                                <li class="list-group-item"><b>TOTAL: {{total}}</b></li>
+                            </ul>
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ul>
+</div>
