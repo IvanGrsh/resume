@@ -1,0 +1,183 @@
+<div>
+    <ul>
+        <div class="card" style="width: 22rem;">
+            <div class="card-body">
+                <h3 class="card-title">{{name}}</h3>
+                {{!-- <h6 class="card-subtitle mb-2 text-body-secondary">Users:</h6> --}}
+                <div>
+                    {{#each users}}
+                    <br>
+                    <div class="card" style="width: 20rem;">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Users:</h6>
+                            <h5 class="card-title">id:{{id}}. {{name}}</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">gender: {{gender}}</h6>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">age: {{age}}</h6>
+                        </div>
+
+                        {{#each friends}}
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">id:{{id}}. {{name}} (friends)
+                                <ul>
+                                    gender: {{gender}}
+                                    <br>
+                                    age: {{age}}
+                                </ul>
+                            </li>
+                            <div>
+                                {{#each mutual_friends}}
+                                <li class="list-group-item"> id:{{id}}. {{name}} (mutual friends)
+                                    <ul>
+                                        gender: {{gender}}
+                                        <br>
+                                        age: {{age}}
+                                    </ul>
+                                </li>
+                                <div>
+                                    {{#each mutual_friends}}
+                                    <li class="list-group-item"> id:{{id}}. {{name}} (mutual friends)
+                                        <ul>
+                                            gender: {{gender}}
+                                            <br>
+                                            age: {{age}}
+                                        </ul>
+                                    </li>
+                                    {{/each}}
+                                </div>
+                                {{/each}}
+                            </div>
+
+                            <div>
+                                <div class="col">
+                                    <div class="card">
+                                        {{#each groups}}
+                                        <div class="card-body">
+                                            <h5>Groups:</h5>
+                                            <h5 class="card-title">{{id}}. {{name}}</h5>
+                                            <p class="card-text"></p> "{{description}}"
+                                            {{#each members}}
+                                            <div class="card-body">
+                                                <h6 class="card-title">id:{{id}}. {{name}}</h6>
+                                                <h6 class="card-subtitle mb-2 text-body-secondary">gender:
+                                                    {{gender}}
+                                                </h6>
+                                                <h6 class="card-subtitle mb-2 text-body-secondary">age: {{age}}</h6>
+                                            </div>
+                                            {{/each}}
+                                        </div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </ul>
+                        {{/each}}
+
+
+                        <div>
+                            <div class="col">
+                                <div class="card">
+                                    {{#each groups}}
+                                    <div class="card-body">
+                                        <h5>Groups:</h5>
+                                        <h5 class="card-title">{{id}}. {{name}}</h5>
+                                        <p class="card-text"></p> "{{description}}"
+                                        {{#each members}}
+                                        <div class="card-body">
+                                            <h6 class="card-title">id:{{id}}. {{name}}</h6>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">gender: {{gender}}</h6>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">age: {{age}}</h6>
+                                        </div>
+                                        {{/each}}
+                                    </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </ul>
+</div>
+{{!--
+</div>
+<br>
+<div>
+    <ul>
+
+        <div class="col">
+            <div class="card">
+                {{#each groups}}
+                <div class="card-body">
+                    <h5>Groups:</h5>
+                    <h5 class="card-title">{{id}}. {{name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">gender: {{gender}}</h6>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">age: {{age}}</h6>
+                    <p class="card-text">This is a longer card with supporting text below as a
+                        natural
+                        lead-in to additional content.</p>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+    </ul>
+</div> --}}
+{{!-- <div>
+    {{#each groups}}
+
+    {{/each}}
+</div> --}}
+
+
+
+{{!-- {{#each users}}
+
+<br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{id}}. {{name}}</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">gender: {{gender}}</h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary">age: {{age}}</h6>
+            </div>
+        </div>
+    </div>
+
+
+    {{#each friends}}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5>friends</h5>
+                <h5 class="card-title">{{id}}. {{name}}</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">gender: {{gender}}</h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary">age: {{age}}</h6>
+                <p class="card-text">This is a longer card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+
+
+    {{#each mutual_friends}}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5>mutual friends</h5>
+                <h5 class="card-title">{{id}}. {{name}}</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">gender: {{gender}}</h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary">age: {{age}}</h6>
+                <p class="card-text">This is a longer card with supporting text below as a natural
+                    lead-in to additional content.</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    {{/each}}
+
+</div>
+{{/each}} --}}
