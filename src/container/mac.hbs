@@ -1,0 +1,92 @@
+<div>
+    <ul>
+        <div class="card" style="width: 34rem;">
+            <div class="card-body">
+                <h4 class="card-title">{{name}}</h4>
+                <h5 class="card-subtitle mb-2 text-body-secondary"> Price: {{price}} USD</h5>
+                <p class="card-text">"{{description}}"</p>
+                <a href="#" class="card-info">{{category}}</a> /
+                <a href="#" class="card-link">Another Category</a>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                        <div class="card">
+                            <div class="card-body">
+                                {{#with features}}
+                                <h5 class="card-title">Features:</h5>
+                                <br>
+                                {{#with processor}}
+                                <b>Processor:</b>
+                                {{brand}} {{model}}, {{speed}}, cores {{cores}}, {{cache}}
+                                {{/with}}
+                                <br>
+                                <hr>
+                                {{#with memory}}
+                                <b>Memory:</b>
+                                {{type}}, {{size}}, speed {{speed}}
+                                {{/with}}
+                                <br>
+                                <hr>
+                                {{#with storage}}
+                                <b>Storage:</b>
+                                {{type}}, {{size}}
+                                {{/with}}
+                                <br>
+                                <hr>
+                                {{#with display}}
+                                <b>Display:</b>
+                                {{size}}, {{resolution}}, {{technology}}, {{color_space}}, {{brightness}},
+                                {{refresh_rate}}
+                                {{/with}}
+                                <br>
+                                <hr>
+                                {{#with graphics}}
+                                <b>Graphics:</b>
+                                {{brand}}, {{model}}, {{memory}}
+                                {{/with}}
+                                <br>
+                                <hr>
+                                <b>Ports:</b>
+                                <ul>
+                                    {{#each ports}}
+                                    <li>{{type}}, {{count}}</li>
+                                    {{#if features}} {{features}} {{/if}}
+                                    {{/each}}
+                                </ul>
+                                {{!-- <br> --}}
+                                <hr>
+                                {{#with battery}}
+                                <b>Battery:</b>
+                                {{type}}, {{capacity}}, {{life}}
+                                {{/with}}
+                                <br>
+                                <hr>
+                                <b>Weight:</b> {{weight}}
+                                <br>
+                                <hr>
+                                {{#with dimensions}}
+                                <b>Dimensions:</b>
+                                {{height}} / {{width}} / {{depth}}
+                                {{/with}}
+                                <br>
+                                <hr>
+                                <b>Operating system:</b> {{operating_system}}
+                                <br>
+                                <hr>
+                                <b>Accessories:</b>
+                                <ul>
+                                    {{#each accessories}}
+                                    <li>{{name}}</li>
+                                    price: {{price}} USD
+                                    {{/each}}
+                                </ul>
+                                {{/with}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ul>
+</div>
