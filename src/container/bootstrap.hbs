@@ -1,73 +1,384 @@
-<main>
-    <div class="card">
-        <div class="card-body">
+{{!-- <main class="text-bg-warning"> --}}
+    <main>
+        <div class="row gy-5">
 
-            <h1 class="text-center text-uppercase">Hello World</h1>
-            <h2 class="text-end text-lowercase">Second</h2>
-            <h3 class="text-capitalize">3 task title one</h3>
+            <section class="col-12">
+                <div class="card text-bg-dark">
+                    <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
+                    <div class="card-body">
+                        <h5 class="card-title text-bg-primary">Product #12345</h5>
+                        <p class="text-bg-secondary">USB type c, 12 in 1</p>
+                        <a href="/summary" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </section>
 
-            <hr>
 
-            <div class="display-1 text-muted">Hello World</div>
-            <div class="display-5">Second</div>
-            <div class="display-6">3 task</div>
+            <section class="col-3">
+                <div class="card text-bg-primary">
 
-            <hr>
+                    <div class="card-header">
+                        <h5>Menu</h5>
+                    </div>
 
-            <div class="text-muted text-end">
-                next <span class="display-6">text</span>
-            </div>
-            <hr>
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item">
+                            <a href="#" class="btn btn-link ">Home page</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="btn btn-link ">Summary page</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="btn btn-link ">Skills page</a>
+                        </li>
+                    </ul>
 
-            <a href="#" class="btn btn-success">
-                <span class="text-uppercase">Button primary</span>
-                <h1>test</h1>
-            </a>
 
-            <hr>
-
-            <div class="card">
-                <div class="card-body">
-
-                    <p class="text-primary">My Text</p>
-                    <p class="text-muted">My Text</p>
+                    <div class="card-footer">
+                        <button class="btn btn-dark btn-sm">Update-list</button>
+                    </div>
 
                 </div>
-            </div>
+            </section>
 
-            <hr>
+            <section class="col-9">
+                <table class="table  table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                #id
+                            </th>
+                            <th>
+                                name
+                            </th>
+                            <th>
+                                age
+                            </th>
+                        </tr>
+                    </thead>
 
-            <div class="card">
-                <div class="card-body">
-                    <button class="btn btn-secondary"> new button </button>
-                    <button class="btn btn-outline-primary"> My button </button>
-                    <button class="btn btn-outline-danger"> danger button </button>
-                    <button class="btn btn-outline-warning"> warning button </button>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Jhon</td>
+                            <td>35</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Ivan</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Ivan</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Ivan</td>
+                            <td>29</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <section class="col-12">
+            <div class="row g-2">
+                <div class="col-3">
+                    <div class="card text-bg-warning">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is content of our box</p>
+                            <button class="btn btn-light">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card text-bg-warning">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is content of our box</p>
+                            <button class="btn btn-light">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card text-bg-warning">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is content of our box</p>
+                            <button class="btn btn-light">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card text-bg-warning">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is content of our box</p>
+                            <button class="btn btn-light">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <hr>
+        {{!--
+        <br>
+        <br>
+        <br>
 
-            <div class="card">
-                <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">Item 1
+                <ul class="list-group">
+                    <li class="list-group-item">Item 1.1</li>
+                    <li class="list-group-item">Item 1.2</li>
+                </ul>
+            </li>
 
-                    <button class="btn btn-secondary btn-lg"> new button </button>
-                    <button class="btn btn-outline-primary"> My button </button>
-                    <button class="btn btn-outline-danger btn-sm"> danger button </button>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+        </ul>
 
-                </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="card text-bg-primary">
+
+            <div class="card-header">
+                <h5>Menu</h5>
             </div>
 
-            <hr>
+            <ul class="list-group list-group-flush ">
+                <li class="list-group-item text-bg-dark">
+                    <a href="#" class="btn btn-link ">Home page</a>
+                </li>
+                <li class="list-group-item text-bg-warning">
+                    <a href="#" class="btn btn-link ">Summary page</a>
+                </li>
+                <li class="list-group-item text-bg-info">
+                    <a href="#" class="btn btn-link ">Skills page</a>
+                </li>
+            </ul>
 
-            <div class="card">
-                <div class="card-body">
-                    This is content
-                </div>
+
+            <div class="card-footer">
+                <button class="btn btn-dark btn-sm">Update-list</button>
             </div>
 
         </div>
-    </div>
+
+        <br>
+        <br>
+        <br>
 
 
-</main>
+        <ul class="list-group ">
+            <h5>Menu</h5>
+            <li class="list-group-item">
+                <a href="#" class="btn btn-link">Home page</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#" class="btn btn-link">Summary page</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#" class="btn btn-link">Skills page</a>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+        <br>
+
+        <table class="table table-striped table-bordered text-bg-success">
+            <thead>
+                <tr>
+                    <th>
+                        #id
+                    </th>
+                    <th>
+                        name
+                    </th>
+                    <th>
+                        age
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Jhon</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Ivan</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Ivan</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Ivan</td>
+                    <td>29</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <br>
+        <br>
+
+        <table class="table  table-bordered text-bg-success">
+            <thead>
+                <tr>
+                    <th>
+                        #id
+                    </th>
+                    <th>
+                        name
+                    </th>
+                    <th>
+                        age
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Jhon</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Ivan</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Ivan</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Ivan</td>
+                    <td>29</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title">Title</div>
+                This is content of our box
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="card text-bg-warning">
+            <div class="card-header text-center">Header</div>
+            <div class="card-body text-center">
+                <h6 class="card-title">This is title</h6>
+                <p>This is content of our box</p>
+                <button class="btn btn-light">Click!</button>
+            </div>
+            <div class="card-footer text-center">Footer</div>
+        </div>
+
+        <br>
+        <br>
+        <br> --}}
+
+        {{!-- g-5 максимум 5 --}}
+        {{!-- <div class="row gx-5 gy-1">
+            <div class="col-4">
+                <div class="card text-bg-warning">
+                    <div class="card-header text-center">Header</div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">This is title</h6>
+                        <p>This is content of our box</p>
+                        <button class="btn btn-light">Click!</button>
+                    </div>
+                    <div class="card-footer text-center">Footer</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-warning">
+                    <div class="card-header text-center">Header</div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">This is title</h6>
+                        <p>This is content of our box</p>
+                        <button class="btn btn-light">Click!</button>
+                    </div>
+                    <div class="card-footer text-center">Footer</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-warning">
+                    <div class="card-header text-center">Header</div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">This is title</h6>
+                        <p>This is content of our box</p>
+                        <button class="btn btn-light">Click!</button>
+                    </div>
+                    <div class="card-footer text-center">Footer</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-warning">
+                    <div class="card-header text-center">Header</div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">This is title</h6>
+                        <p>This is content of our box</p>
+                        <button class="btn btn-light">Click!</button>
+                    </div>
+                    <div class="card-footer text-center">Footer</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-warning">
+                    <div class="card-header text-center">Header</div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">This is title</h6>
+                        <p>This is content of our box</p>
+                        <button class="btn btn-light">Click!</button>
+                    </div>
+                    <div class="card-footer text-center">Footer</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-warning">
+                    <div class="card-header text-center">Header</div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">This is title</h6>
+                        <p>This is content of our box</p>
+                        <button class="btn btn-light">Click!</button>
+                    </div>
+                    <div class="card-footer text-center">Footer</div>
+                </div>
+            </div>
+        </div> --}}
+
+    </main>
