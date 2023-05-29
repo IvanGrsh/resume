@@ -17,29 +17,31 @@
 
 </head>
 
-<body>
+<body class="p-5">
 	{{#with header}}
 	<header>
-		<div>
+		<div class="mb-2">
 			<h1>{{Name.firstname}} {{Name.lastname}}</h1>
 		</div>
-		<div>
+		<div class="mb-2">
 			<b>{{position}}</b>
 		</div>
-		<br>
-		<div>
+		{{!-- <br> --}}
+		<div class="mb-2">
 			<em>{{salary}}</em>
 		</div>
-		<br>
-		<div>
+		{{!-- <br> --}}
+		<div class="mb-2">
 			<address>{{address}}</address>
 		</div>
-		<br>
-		<hr>
+		{{!-- <br> --}}
+		<hr class="my-5">
 	</header>
 	{{/with}}
 
-	{{> nav}}
+	<div class="mb-5">
+		{{> nav}}
+	</div>
 
 	{{{body}}}
 
