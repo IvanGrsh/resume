@@ -1,0 +1,40 @@
+<div class="card mb-4">
+    <div class="row">
+        <div class="col-2">
+            <img src="{{image}}" alt="alt" width="150px" class="img-fluid rounded-start m-2">
+        </div>
+
+        <div class="col-4">
+            <div class="pt-1">
+                <h5>{{name}}</h5>
+                <p>{{description}}</p>
+
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="pt-1">
+                <h5>{{price.title}}:</h5>
+                <p>{{price.value}}</p>
+
+            </div>
+        </div>
+
+        <div class="col-1">
+            <div class="pt-1">
+                <p>{{amount}}</p>
+
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="ps-5 pt-1">
+                {{#each buttons}}
+                <button
+                    class="btn {{#if isPrimary}}btn-primary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}} mt-2">{{text}}</button>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+</div>
