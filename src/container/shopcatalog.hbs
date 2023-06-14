@@ -21,7 +21,7 @@
         <div class="nav nav-tabs">
 
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
+                {{!-- <ol class="breadcrumb">
 
                     {{#each breadcrumb}}
                     {{#if this}}
@@ -29,6 +29,19 @@
                     {{else}}
                     <li class="breadcrumb-item active" aria-current="page"><a href="{{url}}">{{name}}</a></li>
                     {{/if}}
+                    {{/each}}
+                </ol> --}}
+                <ol class="breadcrumb">
+                    {{#each breadcrumb}}
+                    {{#unless url}}
+                    <li class="breadcrumb-item">
+                        {{name}}
+                    </li>
+                    {{else}}
+                    <li class="breadcrumb-item">
+                        <a href="{url}}">{{name}}</a>
+                    </li>
+                    {{/unless}}
                     {{/each}}
                 </ol>
             </nav>
