@@ -1,0 +1,32 @@
+<main class="p-4">
+
+    {{#with header}}
+    <div class="card">
+        <div class="row card-body">
+            <p class="col-6 m-0 fw-bold fs-5">{{name}} {{surname}}</p>
+            <p class="col-6 m-0 fw-bold fs-5 text-end">{{title}}</p>
+        </div>
+    </div>
+    {{/with }}
+
+    {{#with service}}
+    <div class="col-7">
+        <h2 class="mt-5 mb-5 me-3">
+            {{title}}
+        </h2>
+        <p class="title mt-5 mb-5 me-3">
+            {{description}}
+        </p>
+    </div>
+    {{#each buttons}}
+
+    <div class="pb-2">
+        <li>
+            <a href="{{link}}" class="btn btn-success">{{text}}</a>
+        </li>
+    </div>
+
+    {{/each}}
+
+    {{/with}}
+</main>

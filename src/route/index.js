@@ -3426,5 +3426,110 @@ router.get('/shopcatalog', function (req, res) {
 
 // ================================================================
 
+router.get('/index8', function (req, res) {
+  res.render('index8', {
+    layout: 'index',
+
+    header: {
+      name: "Ім'я",
+      surname: 'Grohev Ivan',
+      title: 'Resume project',
+    },
+
+    service: {
+      title: 'Cписок сторінок',
+      description:
+        'У цій роботі зібрані усі домашні завдання повьязані з модулем/резюме.',
+      buttons: [
+        {
+          text: 'Show More BIO',
+          link: 'http://localhost:3000/bio',
+        },
+        {
+          text: 'Show More CAR',
+          link: 'http://localhost:3000/car',
+        },
+        {
+          text: 'Show More EDUCATION',
+          link: 'http://localhost:3000/education',
+        },
+        {
+          text: 'Show More FACEBOOK',
+          link: 'http://localhost:3000/facebook',
+        },
+        {
+          text: 'Show More JS',
+          link: 'http://localhost:3000/js',
+        },
+        {
+          text: 'Show More MAC',
+          link: 'http://localhost:3000/mac',
+        },
+        {
+          text: 'Show More PERSON',
+          link: 'http://localhost:3000/person',
+        },
+        {
+          text: 'Show More PROGRAM',
+          link: 'http://localhost:3000/program',
+        },
+        {
+          text: 'Show More SHOPCART',
+          link: 'http://localhost:3000/shopcart',
+        },
+        {
+          text: 'Show More SHOPCATALOG',
+          link: 'http://localhost:3000/shopcatalog',
+        },
+        {
+          text: 'Show More SHOPHOME',
+          link: 'http://localhost:3000/shophome',
+        },
+        {
+          text: 'Show More SHOPPROFILE',
+          link: 'http://localhost:3000/shopprofile',
+        },
+        {
+          text: 'Show More SHOPREVIEW',
+          link: 'http://localhost:3000/shopreview',
+        },
+        {
+          text: 'Show More SKILLS',
+          link: 'http://localhost:3000/skills',
+        },
+        {
+          text: 'Show More SUMMARY',
+          link: 'http://localhost:3000/summary',
+        },
+        {
+          text: 'Show More TASK21',
+          link: 'http://localhost:3000/task21',
+        },
+        {
+          text: 'Show More TASK22',
+          link: 'http://localhost:3000/task22',
+        },
+        {
+          text: 'Show More TASK31',
+          link: 'http://localhost:3000/task31',
+        },
+        {
+          text: 'Show More WEB',
+          link: 'http://localhost:3000/web',
+        },
+        {
+          text: 'Show More WORK',
+          link: 'http://localhost:3000/work',
+        },
+      ],
+    },
+    // attributes: {
+    //   title: 'Cписок сторінок',
+    //   description:
+    //     'Тут вам потрібно написати інформацію про ваш проєкт. Поки що можна написати будь-який текст.',
+    // },
+  })
+})
+
 // Підключаємо роутер до бек-енду
 module.exports = router
